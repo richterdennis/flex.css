@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Demo of flex.css</title>
+  <link rel="stylesheet" type="text/css" href="flex.css">
+</head>
+<body flex-box flex-layout="center">
+
+  <div id="login" style="width:300px;box-shadow:0 0 20px;padding: 0 20px 20px;" flex-col>
+    <h1>Login</h1>
+    <div style="margin-bottom: 10px;" flex-row>
+      <label for="user" flex>User:</label>
+      <input type="text" id="user">
+    </div>
+    <div style="margin-bottom: 10px;" flex-row>
+      <label for="password" flex>Password:</label>
+      <input type="password" id="password">
+    </div>
+    <button flex>Login</button>
+  </div>
+
+</body>
+</html>
