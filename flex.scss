@@ -1,0 +1,200 @@
+/**
+ * The flex css for easy use flexbox
+ * @author Dennis Richter <d.richter@solar-fox.de>
+ */
+
+/* -- container css -- */
+[flex-row], [flex-box], [flex-col], [flex-layout] {
+  display: flex;
+
+  /* -- children css -- */
+  > [flex] {
+    flex: 1;
+  }
+
+  > [flex-2x] {
+    flex: 2;
+  }
+
+  > [flex-3x] {
+    flex: 3;
+  }
+
+  > [flex-4x] {
+    flex: 4;
+  }
+
+  > [flex-5x] {
+    flex: 5;
+  }
+
+  > [flex-6x] {
+    flex: 6;
+  }
+
+  > [flex-7x] {
+    flex: 7;
+  }
+
+  > [flex-8x] {
+    flex: 8;
+  }
+
+  > [flex-9x] {
+    flex: 9;
+  }
+
+
+  > [flex-self="start"] {
+    align-self: flex-start;
+  }
+
+  > [flex-self="center"] {
+    align-self: center;
+  }
+
+  > [flex-self="stretch"] {
+    align-self: stretch;
+  }
+
+  > [flex-self="baseline"] {
+    align-self: baseline;
+  }
+
+  > [flex-self="end"] {
+    align-self: flex-end;
+  }
+}
+
+[flex-row], [flex-box], [flex-layout] {
+  flex-direction: row;
+}
+
+[flex-col] {
+  flex-direction: column;
+}
+
+[flex-row^="reverse"] {
+  flex-direction: row-reverse;
+}
+
+[flex-col^="reverse"] {
+  flex-direction: column-reverse;
+}
+
+body[flex-box] {
+  position: absolute;
+  margin: 0;
+}
+
+[flex-box] {
+  width: 100%;
+  height: 100%;
+}
+
+[flex-row$="wrap"],
+[flex-box$="wrap"],
+[flex-col$="wrap"] {
+  flex-wrap: wrap;
+}
+
+[flex-row$="wrap-reverse"],
+[flex-box$="wrap-reverse"],
+[flex-col$="wrap-reverse"] {
+  flex-wrap: wrap-reverse;
+}
+
+/* flex-Layout main axis */
+[flex-layout^="start"] {
+  justify-content: flex-start;
+}
+
+[flex-layout^="center"] {
+  justify-content: center;
+}
+
+[flex-layout^="stretch"] > * {
+  flex: 1;
+}
+
+[flex-layout^="space"],
+[flex-layout^="space-between"] {
+  justify-content: space-between;
+
+  &:not([flex-content]) {
+    align-content: space-between;
+  }
+}
+
+[flex-layout^="space-around"] {
+  justify-content: space-around;
+
+  &:not([flex-content]) {
+    align-content: space-around;
+  }
+}
+
+[flex-layout^="end"] {
+  justify-content: flex-end;
+}
+
+
+/* flex-Layout cross axis*/
+[flex-layout$="start"] {
+  align-items: flex-start;
+
+  &:not([flex-content]) {
+    align-content: flex-start;
+  }
+}
+
+[flex-layout$="center"] {
+  align-items: center;
+
+  &:not([flex-content]) {
+    align-content: center;
+  }
+}
+
+[flex-layout$="stretch"] {
+  align-items: stretch;
+}
+
+[flex-layout$="baseline"] {
+  align-items: baseline;
+
+  &:not([flex-content]) {
+    align-content: flex-start;
+  }
+}
+
+[flex-layout$="end"] {
+  align-items: flex-end;
+
+  &:not([flex-content]) {
+    align-content: flex-end;
+  }
+}
+
+
+/* flex-Layout content*/
+[flex-content="start"] {
+  align-content: flex-start;
+}
+
+[flex-content="center"] {
+  align-content: center;
+}
+
+[flex-content="space"],
+[flex-content="space-between"] {
+  align-content: space-between;
+}
+
+[flex-content="space-around"] {
+  align-content: space-around;
+}
+
+[flex-content="end"] {
+  align-content: flex-end;
+}
